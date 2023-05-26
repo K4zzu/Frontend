@@ -8,6 +8,9 @@ import CharacterList from "./products/Characters";
 import { useEffect, useState } from "react";
 import Pagination from "./products/Pagination";
 import Reserva from "./products/detail/Reserva";
+import Inventario from "./products/detail/Inventario";
+import Login from "./landing/Login";
+import Registro from "./landing/Registro";
 
 function App() {
 
@@ -40,42 +43,60 @@ function App() {
 
 
   return (
-    <Template>
+    
       <Switch>
-        <Route path="/products" exact>
-          <Pagination 
-            prev={info.prev} 
-            next={info.next}
-            onPrevious={onPrevious} 
-            onNext={onNext}
-          />
-          <CharacterList characters={characters} />
-          <Pagination 
-            prev={info.prev} 
-            next={info.next}
-            onPrevious={onPrevious} 
-            onNext={onNext}
-          />
-        </Route>
-        <Route path="/products/1">
-          <ProductDetail />
-        </Route>
-        <Route path="/products/2">
-          <ProductDetail2/>
-        </Route>
-        <Route path="/products/3">  
-          <ProductDetail3/>
-        </Route>
-
-        <Route path="/reserva">  
-          <Reserva/>
-        </Route>
-
+        
         <Route path="/" exact>
-          <Landing />
+          <Login />
+        </Route>
+
+        <Route path="/registro">  
+              <Registro/>
+        </Route>
+
+        <Route>
+          <Template>
+            <Route path="/products" exact>
+              <Pagination 
+                prev={info.prev} 
+                next={info.next}
+                onPrevious={onPrevious} 
+                onNext={onNext}
+              />
+              <CharacterList characters={characters} />
+              <Pagination 
+                prev={info.prev} 
+                next={info.next}
+                onPrevious={onPrevious} 
+                onNext={onNext}
+              />
+            </Route>
+            <Route path="/products/1">
+              <ProductDetail />
+            </Route>
+            <Route path="/products/2">
+              <ProductDetail2/>
+            </Route>
+            <Route path="/products/3">  
+              <ProductDetail3/>
+            </Route>
+
+            <Route path="/reserva">  
+              <Reserva/>
+            </Route>
+
+            <Route path="/inventario">  
+              <Inventario/>
+            </Route>
+
+            <Route path="/inicio">  
+              <Landing/>
+            </Route>
+
+          </Template>
         </Route>
       </Switch>
-    </Template>
+
   );
 }
 

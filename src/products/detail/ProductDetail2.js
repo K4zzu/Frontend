@@ -13,12 +13,13 @@ function ProductDetail2() {
   function changeRating(newRating) {}
 
   return (
+    <div>
     <div className="container mt-5 py-4 px-xl-5">
       <ScrollToTopOnMount/>
       <nav aria-label="breadcrumb" className="bg-custom-light rounded mb-4">
         <ol className="breadcrumb p-3">
           <li className="breadcrumb-item">
-            <Link className="text-decoration-none link-secondary" to="/">
+            <Link className="text-decoration-none link-secondary" to="/inicio">
               Inicio
             </Link>
           </li>
@@ -176,6 +177,8 @@ function ProductDetail2() {
           </div>
         </div>
       </div>
+      
+      </div>
 
       <div id="contactenos" className="d-flex flex-column bg-white py-4">
         <h5 className="text-center mb-3">Sigue nuestras paginas</h5>
@@ -198,6 +201,8 @@ function ProductDetail2() {
           </a>
         </div>
       </div>
+
+    
 
     </div>
   );

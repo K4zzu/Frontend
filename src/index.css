@@ -80,3 +80,11 @@
 .carousel-caption p {
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
+
+body {
+  background-color: #9A616D;
+}
+
+.reescalado {
+  transform: scale(1.2);
+}

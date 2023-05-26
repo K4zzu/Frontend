@@ -1,6 +1,7 @@
-import BannerZero from "./tejo-1.jpeg";
-import BannerOne from "./billar-0.jpg";
-import BannerTwo from "./fulvo-0.jpg";
+import BannerZero from "./tejo-reserva.png";
+import BannerOne from "./billar-reserva.png";
+import BannerTwo from "./futbol-reserva.png";
+
 
 function BannerIncidator(props) {
   return (
@@ -22,7 +23,7 @@ function BannerImage(props) {
     >
       <div
         className="ratio"
-        style={{ "--bs-aspect-ratio": "50%", maxHeight: "460px" }}
+        style={{ "--bs-aspect-ratio": "150%", maxHeight: "800px" }}
       >
         <img
           className="d-block w-100 h-100 bg-dark cover"
@@ -46,7 +47,7 @@ function BannerImage2(props) {
     >
       <div
         className="ratio"
-        style={{ "--bs-aspect-ratio": "50%", maxHeight: "460px" }}
+        style={{ "--bs-aspect-ratio": "150%", maxHeight: "800px" }}
       >
         <img
           className="d-block w-100 h-100 bg-dark cover"
@@ -70,7 +71,7 @@ function BannerImage3(props) {
     >
       <div
         className="ratio"
-        style={{ "--bs-aspect-ratio": "50%", maxHeight: "460px" }}
+        style={{ "--bs-aspect-ratio": "150%", maxHeight: "800px" }}
       >
         <img
           className="d-block w-100 h-100 bg-dark cover"
@@ -79,14 +80,14 @@ function BannerImage3(props) {
         />
       </div>
       <div className="carousel-caption d-none d-lg-block">
-        <h5>Futbol sintetico</h5>
+        <h5>Fútbol sintetico</h5>
         <p>Alquila las horas y las canchas que quieras</p>
       </div>
     </div>
   );
 }
 
-function Banner() {
+function Carrousellogin() {
   return (
     <div
       id="bannerIndicators"
@@ -99,7 +100,7 @@ function Banner() {
         <BannerIncidator index="1" />
         <BannerIncidator index="2" />
       </div>
-      <div className="carousel-inner">
+      <div className="carousel-inner rounded w-100">
         <BannerImage image={BannerZero} active={true} />
         <BannerImage2 image={BannerOne} />
         <BannerImage3 image={BannerTwo} />
@@ -108,4 +109,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default Carrousellogin;

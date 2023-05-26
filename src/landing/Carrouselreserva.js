@@ -23,7 +23,7 @@ function BannerImage(props) {
     >
       <div
         className="ratio"
-        style={{ "--bs-aspect-ratio": "105%", maxHeight: "660px" }}
+        style={{ "--bs-aspect-ratio": "115%", maxHeight: "687px" }}
       >
         <img
           className="d-block w-100 h-100 bg-dark cover"
@@ -47,7 +47,7 @@ function BannerImage2(props) {
     >
       <div
         className="ratio"
-        style={{ "--bs-aspect-ratio": "105%", maxHeight: "660px" }}
+        style={{ "--bs-aspect-ratio": "115%", maxHeight: "687px" }}
       >
         <img
           className="d-block w-100 h-100 bg-dark cover"
@@ -71,7 +71,7 @@ function BannerImage3(props) {
     >
       <div
         className="ratio"
-        style={{ "--bs-aspect-ratio": "105%", maxHeight: "660px" }}
+        style={{ "--bs-aspect-ratio": "115%", maxHeight: "687px" }}
       >
         <img
           className="d-block w-100 h-100 bg-dark cover"
@@ -93,14 +93,14 @@ function Carrouselreserva() {
       id="bannerIndicators"
       className="carousel slide"
       data-bs-ride="carousel"
-      style={{ marginTop: "56px" }}
+      style={{ marginTop: "0px" }}
     >
       <div className="carousel-indicators">
         <BannerIncidator index="0" active={true} />
         <BannerIncidator index="1" />
         <BannerIncidator index="2" />
       </div>
-      <div className="carousel-inner">
+      <div className="carousel-inner rounded w-100">
         <BannerImage image={BannerZero} active={true} />
         <BannerImage2 image={BannerOne} />
         <BannerImage3 image={BannerTwo} />

@@ -30,8 +30,8 @@ function Header() {
       
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-white border-bottom">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/" onClick={changeNav}>
-          {/* <FontAwesomeIcon icon={["fas", "fa-solid fa-pool-8-ball"]} className="ms-1" size="lg"/> */}
+          <Link className="navbar-brand" to="/inicio" onClick={changeNav}>
+          {/* <FontAwesomeIcon icon="fa-solid fa-pool-8-ball" className="ms-1" size="lg"/> */}
             <FontAwesomeIcon
               icon={["fab", "bootstrap"]}
               className="ms-1"
@@ -55,7 +55,7 @@ function Header() {
               
               <li className="nav-item">
                 <Link className="nav-link" replace onClick={handleScroll}>
-                  Contactenos 
+                  Contáctenos 
                 </Link>
               </li>
               </ul>
@@ -64,6 +64,14 @@ function Header() {
               <li className="nav-item">
                 <Link to="/reserva" className="nav-link btn btn-primary bg-black " style={{ color: '#fff' }} replace onClick={changeNav}>
                   Reserva 
+                </Link>
+              </li>
+              </ul>
+
+              <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link to="/inventario" className="nav-link btn btn-primary ms-2 bg-black" style={{ color: '#fff' }} replace onClick={changeNav}>
+                  Inventario
                 </Link>
               </li>
               </ul>

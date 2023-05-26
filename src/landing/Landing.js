@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 function Landing() {
+  console.log(localStorage.getItem('rol'));
   return (
     <>
       <ScrollToTopOnMount />
