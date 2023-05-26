@@ -25,7 +25,7 @@ function Login() {
     try {
       const response = await axios.post('https://8d2b-2800-484-9f86-4eec-8517-9e27-63f7-f7bf.ngrok-free.app/api/usuarios/login', datosLogin);
       if (response.status === 200) {
-        localStorage.setItem('rol',response.rol);
+        localStorage.setItem('rol',response.data.rol);
         setIsLoged(true);
         // alert('Ha iniciado sesión satisfactoriamente!');
         setRedirectToInicio(true);

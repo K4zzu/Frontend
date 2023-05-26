@@ -16,22 +16,22 @@ function Header() {
       setOpenedDrawer(false)
     }
   }
-  
+
   function handleScroll() {
     window.scroll({
       top: document.body.scrollHeight,
-      left: 0, 
+      left: 0,
       behavior: 'smooth',
     });
   }
 
   return (
     <header>
-      
+
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-white border-bottom">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/inicio" onClick={changeNav}>
-          {/* <FontAwesomeIcon icon="fa-solid fa-pool-8-ball" className="ms-1" size="lg"/> */}
+            {/* <FontAwesomeIcon icon="fa-solid fa-pool-8-ball" className="ms-1" size="lg"/> */}
             <FontAwesomeIcon
               icon={["fab", "bootstrap"]}
               className="ms-1"
@@ -52,31 +52,40 @@ function Header() {
                   API
                 </Link>
               </li>
-              
+
               <li className="nav-item">
                 <Link className="nav-link" replace onClick={handleScroll}>
-                  Contáctenos 
+                  Contáctenos
                 </Link>
               </li>
-              </ul>
-              
-              <ul className="navbar-nav">
+            </ul>
+
+            <ul className="navbar-nav">
               <li className="nav-item">
                 <Link to="/reserva" className="nav-link btn btn-primary bg-black " style={{ color: '#fff' }} replace onClick={changeNav}>
-                  Reserva 
+                  Reserva
                 </Link>
               </li>
-              </ul>
+            </ul>
 
-              <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link to="/inventario" className="nav-link btn btn-primary ms-2 bg-black" style={{ color: '#fff' }} replace onClick={changeNav}>
-                  Inventario
-                </Link>
-              </li>
-              </ul>
-            
-            
+            <ul className="navbar-nav">
+              {localStorage.getItem('rol') === 'admin' ? (
+                <li className="nav-item">
+                  <Link
+                    to="/inventario"
+                    className="nav-link btn btn-primary ms-2 bg-black"
+                    style={{ color: '#fff' }}
+                    replace
+                    onClick={changeNav}
+                  >
+                    Inventario
+                  </Link>
+                </li>
+              ) : null}
+            </ul>
+
+
+
           </div>
 
           <div className="d-inline-block d-lg-none">

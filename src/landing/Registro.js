@@ -23,15 +23,14 @@ function Registro() {
       await axios.post('https://8d2b-2800-484-9f86-4eec-8517-9e27-63f7-f7bf.ngrok-free.app/api/usuarios/', datosRegistro)
         .then(response => {
           // Manejar la respuesta del backend si es necesario
+          alert(response.data.msg);
+          setIsRegistered(true);
           console.log(response.data);
         })
         .catch(error => {
           // Manejar errores de la solicitud si es necesario
           console.error(error);
         });
-
-        setIsRegistered(true);
-        alert('Se ha enviado un correo de confirmación. Por favor, revisa tu bandeja de entrada.');
     };
 
   return (
