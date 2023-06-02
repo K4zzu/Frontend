@@ -84,7 +84,37 @@ function Header() {
               ) : null}
             </ul>
 
+            <ul className="navbar-nav">
+              {localStorage.getItem('rol') === 'admin' ? (
+                <li className="nav-item">
+                  <Link
+                    to="/listadoreservas"
+                    className="nav-link btn btn-primary ms-2 bg-black"
+                    style={{ color: '#fff' }}
+                    replace
+                    onClick={changeNav}
+                  >
+                    Ver reservas
+                  </Link>
+                </li>
+              ) : null}
+            </ul>
 
+            <ul className="navbar-nav">
+              {localStorage.getItem('token')  ? (
+                <li className="nav-item">
+                  <Link
+                    to="/"
+                    className="nav-link btn btn-danger ms-2 bg-black"
+                    style={{ color: '#fff' }}
+                    replace
+                    onClick={changeNav}
+                  >
+                    LogOut
+                  </Link>
+                </li>
+              ) : null}
+            </ul>
 
           </div>
 

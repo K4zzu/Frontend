@@ -26,7 +26,10 @@ function Login() {
     try {
       const response = await axios.post('http://ec2-3-82-214-192.compute-1.amazonaws.com:3000/api/usuarios/login', datosLogin);
       if (response.status === 200) {
+        console.log(response.data)
         localStorage.setItem('rol',response.data.rol);
+        localStorage.setItem('token',response.data.token);
+        localStorage.setItem('id_usuario',response.data._id)
         setIsLoged(true);
         // alert('Ha iniciado sesión satisfactoriamente!');
         setRedirectToInicio(true);

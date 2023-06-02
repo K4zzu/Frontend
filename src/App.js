@@ -11,6 +11,7 @@ import Reserva from "./products/detail/Reserva";
 import Inventario from "./products/detail/Inventario";
 import Login from "./landing/Login";
 import Registro from "./landing/Registro";
+import ListadoReservas from "./products/detail/ListadoReservas";
 
 function App() {
 
@@ -87,6 +88,10 @@ function App() {
 
             <Route path="/inventario">  
               <Inventario/>
+            </Route>
+
+            <Route path="/listadoreservas">  
+              <ListadoReservas/>
             </Route>
 
             <Route path="/inicio">  
