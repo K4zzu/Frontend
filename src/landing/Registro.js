@@ -2,6 +2,7 @@ import React from 'react';
 import Carrousellogin from './Carrousellogin';
 import axios from 'axios';
 import { useState } from 'react';
+import Logo from '../../src/landing/billar-icon.png';
 
 function Registro() {
     const [nombre, setNombre] = useState('');
@@ -20,7 +21,7 @@ function Registro() {
       };
   
       // Realizar una solicitud POST al backend utilizando axios
-      await axios.post('https://8d2b-2800-484-9f86-4eec-8517-9e27-63f7-f7bf.ngrok-free.app/api/usuarios/', datosRegistro)
+      await axios.post('http://ec2-3-82-214-192.compute-1.amazonaws.com:3000/api/usuarios/', datosRegistro)
         .then(response => {
           // Manejar la respuesta del backend si es necesario
           alert(response.data.msg);
@@ -44,7 +45,10 @@ function Registro() {
             <div className="card-body d-flex flex-column align-items-center">
               <div className="d-flex flex-row mt-2">
                 <i className="fas fa-cubes fa-3x me-3" style={{ color: '#ff6219' }}></i>
-                <h1 className="h1 fw-bold mb-0">-logito- Don Alquiles</h1>
+                {/* <h1 className="h1 fw-bold mb-0">-logito- Don Alquiles</h1> */}
+                  <h1 className="h1 fw-bold mb-0">
+                    <img src={Logo} alt="Logo de Don Alquiles" style={{ width: '70px', height: 'auto' }} /> Don Alquiles
+                  </h1>
               </div>
               <h5 className="fw-normal my-4 pb-3" style={{ letterSpacing: '1px' }}>Regístrate</h5>
               
@@ -62,7 +66,7 @@ function Registro() {
               </div> */}
 
               <button className="btn btn-dark btn-lg mb-4 px-5" onClick={handleRegistro}>Registrarse</button>
-              <p className="mb-5 pb-lg-2" style={{ color: '#393f81' }}>¿Ya tienes una cuenta? <a href="/react-ecommerce-template#/" style={{ color: '#393f81' }}>Inicia sesión aquí</a></p>
+              <p className="mb-5 pb-lg-2" style={{ color: '#393f81', letterSpacing: '1px' }}>¿Ya tienes una cuenta? <a href="/react-ecommerce-template#/" style={{ color: '#393f81', letterSpacing: '1px', textDecoration: "none", fontWeight: "bold" }}>Inicia sesión aquí</a></p>
               
             </div>
           </div>

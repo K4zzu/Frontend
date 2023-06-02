@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
+import Logo from '../../landing/billar-icon.png';
 
 
 const iconPath =
@@ -86,6 +87,10 @@ function Inventario() {
             </div>
             <div class="card-body">
 
+                  <h1 className="h1 fw-bold mb-0 "style={{ display: 'flex', justifyContent: 'center'}}>
+                    <img src={Logo} alt="Logo de Don Alquiles" style={{ width: '50px', height: 'auto', marginRight: '5px' }} /> Don Alquiles
+                  </h1>
+
               <form onSubmit={handleSubmit}>
                 
                   <div class="md-6 mb-3">
@@ -127,18 +132,30 @@ function Inventario() {
               {tableData.length > 0 && (
                 <table className="table">
                   <thead>
-                    <tr>
-                      <th>Columna 1</th>
-                      <th>Columna 2</th>
-                      <th>Columna 3</th>
-                    </tr>
-                  </thead>
+                      <tr>
+                        <th>Columna 1</th>
+                        <th>Columna 2</th>
+                        <th>Columna 3</th>
+                        <th>Agregar</th>
+                        <th>Restar</th>
+                        <th>Eliminar</th>
+                      </tr>
+                    </thead>
                   <tbody>
-                    {tableData.map((row, index) => (
+                  {tableData.map((row, index) => (
                       <tr key={index}>
                         <td>{row.columna1}</td>
                         <td>{row.columna2}</td>
                         <td>{row.columna3}</td>
+                        <td>
+                          <button type="button" className="btn btn-primary">+</button>
+                        </td>
+                        <td>
+                          <button type="button" className="btn btn-danger">-</button>
+                        </td>
+                        <td>
+                          <button type="button" className="btn btn-warning">x</button>
+                        </td>
                       </tr>
                     ))}
                   </tbody>

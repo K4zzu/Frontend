@@ -110,14 +110,6 @@ function Reserva() {
         
         </form>
 
-
-           {/*<div className="row g-3 mb-4">
-             
-              <div className="col">
-                <button className="btn btn-dark py-2 w-100">Reservar</button>
-              </div>
-            </div>*/}
-
             {/*<h4 className="mb-0">Detalles</h4>
             <hr />
             <dl className="row">
